@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KIM & JANG</title>
+        <link rel="stylesheet" href="./홈페이지.css" type="text/css">
+    </head>
+    <body>
+        <div class="grids">
+            <div class="container">
+                <header>
+                    <nav>
+                        <a href="#" class="hide-desktop">
+                            <img src="https://image.flaticon.com/icons/svg/36/36775.svg" alt="toggle menu" class=menu id=menu>
+                        </a>
+
+                         <ul class="show-desktop hide-mobile" id="nav">
+                             <li id = "exit" class="exit-btn hide-desktop">
+                                 <img src="https://image.flaticon.com/icons/svg/458/458595.svg" alt="exit menu">
+                             </li>
+                            
+                            <li><a id="small_header" href="홈페이지.html">Home</a></li>
+                            <li><a id="small_header" href="project.html">Projects</a></li>
+                            <li><a id="small_header" href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div class="grid-header">
+                <a href="홈페이지.html" class="grid-header">HOME</a>
+                <a href="project.html" class="grid-header">PROJECT</a>
+                <a href="contacts.html" class="grid-header">CONTACTS</a>     
+            </div>
+            <div class="grid-logo">
+                <h1 id="logo">KIM & JANG</h1>
+                    <p><br><b>멋쟁이 사자가 되고 싶은 김씨 & 장씨 아기사자 친구들입니다.</b></p>
+            </div>
+            
+            <div class="grid-empty1">
+            </div>
+            <div class="grid-content">
+                <div class="name">
+                    <li class="name1">
+                        <a href="rh_detail.html">
+                            <img class="profile" src="루희티콘.png" width="100" height="100"> 
+                            <p class="name_content">김루희</p>
+                        </a>
+                        <blockquote class="name_content">중간개발자</blockquote>
+                    </li>
+                    <li class="name2">
+                        <a href="ha_detail.html">
+                            <img class="profile" src="현아티콘.png" width="100" height="100">
+                            <p class="name_content">김현아</p>
+                        </a>
+                        <blockquote class="name_content">막내개발자</blockquote>
+                    </li>
+                    <li class="name3">
+                        <a href="sh_detail.html">
+                            <img class="profile" src="수현티콘.png" width="100" height="100">
+                            <p class="name_content">장수현</p>
+                        </a>
+                        <blockquote class="name_content">대표개발자</blockquote>
+                    </li>
+                </div>
+                
+            </div>
+            <div class="grid-empty2">
+            </div>
+
+            <div class="grid-footer">
+                <img class="likelion" src="basiclogo_E_H_W.png" width="110">
+                <li>이화여자대학교 멋쟁이사자처럼</li>
+            </div>
+        </div>
+        <script>
+            var menu = document.getElementById('menu');
+            var nav = document.getElementById('nav');
+            var exit = document.getElementById('exit');
+        
+            menu.addEventListener('click', 
+            function(e){
+                nav.classList.toggle('hide-mobile');
+                e.preventDefault();}
+            );
+        
+            exit.addEventListener('click',
+             function(e){
+                nav.classList.add('hide-mobile');
+                e.preventDefault();}
+            );
+        </script>  
+    </body>
+</html>

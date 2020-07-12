@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'GmarketSansBold';
+}
+@font-face { font-family: 'GmarketSansBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+body{
+    background-size: auto;
+    background-image: url(http://www.ewha.ac.kr/upload/board/9890/169630_2.jpg);
+    background-attachment: fixed;
+}
+
+.grids{
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr 1fr 20%;
+}
+
+div {
+    background-color: rgba( 255, 255, 255, 0.5 );
+
+}
+
+.grid-header{
+    background-color:rgb(61, 110, 73);
+    text-decoration: none;
+    color:white;
+    grid-column: 1 / span 5;
+    display: inline;
+    text-align: right;
+    padding: 0.8em;
+    padding-top: 1em;
+    word-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.grid-header:hover { color : black;}
+
+.grid-logo{
+    color: rgb(61, 110, 73);
+    text-align: center;
+    grid-column: 1 / span 5;
+    padding: 2.5em;
+    font-size: 1.1em;
+}
+#logo{
+    font-family: 'GmarketSansBold';
+}
+
+
+.grid-content {
+    list-style-type: none;
+    grid-column: 2/ span 3;
+    padding: 0.5em;
+
+}
+
+.name{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap:15px;
+    background:transparent;
+    margin-bottom: 4em;
+    
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.name1, .name2, .name3{
+    background-color: white;
+    padding: 1em;
+    margin: 0.5em 2.5em;
+    border-radius: 1em;
+    text-align: center;
+    vertical-align: middle;
+    color:rgb(61, 110, 73);
+    line-height: 1em;
+    box-shadow: 0px 0px 10px #ccc;
+    margin-left: 2em;
+    margin-right: 2em;
+
+}
+
+.name1:hover, .name2:hover, .name3:hover { background-color : rgba(255, 255, 255, 0.815);}
+
+.name_content{
+    padding: 1em;
+    color: rgb(61, 110, 73);
+    text-align: center;
+}
+
+.profile {
+    float: left;
+}
+
+.project{
+    background-color: white;
+    border-radius: 1em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1em;
+    margin: 0.5em 2.5em;
+    color:rgb(61, 110, 73);
+    line-height: 1em;
+}
+
+.grid-footer {
+    background-color:rgb(0, 0, 0);
+    list-style-type: none;
+    color:white;
+    text-align: center;
+    grid-column: 1 / span 5;
+    padding: 0.8em;
+    padding-top: 1em;
+    font-size: 0.9em;
+}
+
+
+
+@media screen and (max-width:650px){
+    body{
+        background-color: rgba( 255, 255, 255, 0.5 );
+        width: 100vw;
+    }
+
+    .container{
+        width: 100vw;
+        display: inline-block;
+       }
+
+
+    .grid-header{
+        display: none; 
+        background-color: black;
+    }
+
+    
+    .hide-desktop{
+        margin-left: 20px;
+        display: fixed;
+    }
+    
+    .hide-mobile{
+        display: none;
+    }
+    
+    .menu{
+        width:25px;
+        margin-top : 2vh ; /*you have to change  same margin-top .. 2vh... right? */
+    }
+    
+    li{
+        list-style-type: none;
+        /*height: 150px;*/
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    nav ul {
+        position: fixed;
+        width: 60%;
+        top:0;
+        left:0; /* i change right -> left. to stick to the left side of the screen */
+        text-align: left;
+        background:rgb(36,41,44);
+        z-index: 7;
+        height: 100%;
+        padding-top: 3em;
+        font-size: 1em;
+        
+    }
+    
+    nav ul li a{
+        color: white;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+    }
+    
+    nav ul li a:hover { 
+        color: rgb(100, 177, 119);  
+    }
+    
+    .exit-btn{
+        margin-bottom: 1em;
+        margin-top: -0.6em;
+        text-align: right;
+        padding: 0 1.4em;
+    }
+    
+    .exit-btn img{
+        width: 20px;
+        cursor: pointer;
+    }
+    .name1, .name2, .name3{
+        padding-top: 0.8em;
+        margin: 0.1em 3em;
+        line-height: 8px;
+        margin-left: 0em;
+        margin-right: 0em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+    .name_content {
+        font-size: 0.85em;
+        padding: 1em;
+        padding-top:1.3em;
+    }
+    img.profile {
+        margin-right: 0.1em;
+        padding-bottom: 0.2em;
+    }
+
+    .grid-footer {
+        padding: 0.1em;
+        padding-top: 3em;
+        font-size: 0.7em;
+    }
+
+}
+
+@media screen and (max-width:460px) {
+    img.profile { 
+        margin-left: 1.6em;
+        margin-right: 1em;
+    }
+}
+
+@media only screen and (min-width:650px){
+    .container{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:750px)  {
+    .name1, .name2, .name3{
+        padding: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        margin: 0.5em 2.5em;
+        line-height: 1em;
+        margin-left: 5em;
+        margin-right: 5em;
+    
+    }
+}
+
+@media only screen and (min-width:1100px)  {
+    .name1, .name2, .name3{
+        padding: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        margin: 0.5em 2.5em;
+        line-height: 1em;
+        margin-left: 11em;
+        margin-right: 11em;
+    
+    }
+}

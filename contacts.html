@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KIM & JANG</title>
+        <link rel="stylesheet" href="./menu.css" type="text/css">
+    </head>
+    <body>
+        <div class="grids">
+            <div class="grid-header">
+                <a href="홈페이지.html" class="grid-header">HOME</a>
+                <a href="project.html" class="grid-header">PROJECT</a>
+                <a href="contacts.html" class="grid-header">CONTACTS</a>     
+            </div>
+            <div class="container">
+                <header>
+                    <nav>
+                        <a href="#" class="hide-desktop">
+                            <img src="https://image.flaticon.com/icons/svg/36/36775.svg" alt="toggle menu" class=menu id=menu>
+                        </a>
+                         <ul class="show-desktop hide-mobile" id="nav">
+                             <li id = "exit" class="exit-btn hide-desktop">
+                                 <img src="https://image.flaticon.com/icons/svg/458/458595.svg" alt="exit menu">
+                             </li>
+                            
+                            <li><a href="홈페이지.html">Home</a></li>
+                            <li><a href="project.html">Projects</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div class="grid-content">
+                <ul class="contacts"> <br><br><br>
+                    <div class="img"><a href="https://github.com/roniruny"><img src="루희티콘.png" width="300"></a></div>
+                    <div class="img"><a href="https://github.com/akimcse"><img src="현아티콘.png" width="300"></a></div>
+                    <div class="img"><a href="https://github.com/jangsu6266"><img src="수현티콘.png" width="300"></a></div>
+                    <br><br><br><p class="contacts_title">Contacts</p><br>
+                    <blockquote class="contacts_content">개발자티콘을 클릭해주세요!<br>깃허브로 연결됩니다. :)</blockquote>
+                </ul>  
+            </div>
+            <div class="grid-footer">
+                <img class="likelion" src="basiclogo_E_H_W.png" width="110">
+                <ul>이화여자대학교 멋쟁이사자처럼</ul>
+            </div>
+        </div>
+        <script>
+            var menu = document.getElementById('menu');
+            var nav = document.getElementById('nav');
+            var exit = document.getElementById('exit');
+        
+            menu.addEventListener('click', 
+            function(e){
+                nav.classList.toggle('hide-mobile');
+                e.preventDefault();}
+            );
+        
+            exit.addEventListener('click',
+             function(e){
+                nav.classList.add('hide-mobile');
+                e.preventDefault();}
+            );
+        </script>       
+    </body>
+</html>
