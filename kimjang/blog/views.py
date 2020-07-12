@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from .forms import CommentForm
 
+from blog.models import Blog, Hashtag
 # Create your views here.
 def home(request):
     blogs = Blog.objects
@@ -11,7 +12,8 @@ def home(request):
 
 def detail(request, blog_id):
     blog_detail = get_object_or_404(Blog, pk=blog_id)
-    return render(request, 'detail.html', {'blog' : blog_detail})
+    hashtags = blog_detail.hashtag.all()
+    return render(request, 'detail.html', {'blog' : blog_detail, 'hashtags':hashtags})
 
 def new(request):
     return render(request, 'new.html')
@@ -22,6 +24,12 @@ def create(request):
     blog.body = request.GET['body']
     blog.pub_date = timezone.datetime.now()
     blog.save()
+
+    hashtags=request.GET['hashtags']
+    hashtag=hashtags.split(",")
+    for tag in hashtag:
+        ht=Hashtag.objects.get_or_create(name=tag)
+        blog.hashtag.add(ht[0])
     return redirect('/blog/' + str(blog.id))
 
 def delete(request, blog_id):

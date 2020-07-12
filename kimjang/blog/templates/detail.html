@@ -3,6 +3,13 @@
     <h1>{{ blog.title }}</h1>
     <p>{{ blog.pub_date }}</p>
     <p>{{ blog.body }}</p>
+
+        <div class="hashtag">
+            {% for hashtag in hashtags %}
+            #{{hashtag.name}}
+            {% endfor %}
+        </div>
+    <br>
     <a href="{% url 'home' %}" style="text-decoration: none;">돌아가기</a>
     <br>
     <br>
