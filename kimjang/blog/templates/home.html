@@ -1,38 +1,70 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김앤장의 떼껄룩</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <style>
+      div, h1, h5, p, a { text-align: center;}
+      .navbar{position: fixed; left:0; top:0; width: 100%; z-index:999;}
+      .navbar-text{ margin-right: 100px;}
+      h1{ font-weight: 900; margin-top: 50px;}
+      .container{ text-align: left; display: grid; grid-template-columns: 1fr 1fr; margin: 30px auto 90px auto;}
+      .card{ display: inline-block; margin: 30px 20px 0; padding: 30px ; width: 30rem;}
+      footer{ position: fixed; left:0; bottom:0; width:100%; font-weight: 100; color: lightgray; margin-top: 10vh;}
+      footer p{ font-size: 14px; font-weight: 500; padding: 15px 0 5px 0;}
+    </style>
+</head>
 
-<nav class="navbar navbar-expand-lg " style="background-color: rgb(61, 110, 73);">
-  <a class="navbar-brand" href="#" style="color: white;">KIM&JANG</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: rgb(61, 110, 73);">
+    <a class="navbar-brand" href="#" style="color: white;">✨KIM&JANG✨</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}" style="color: white;">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'home' %}" style="color: white;">HOME <span class="sr-only">(current)</span></a>
       </li>
 
     </ul>
-    <a class="btn btn-outline-light" href="{% url 'new' %}" style='text-decoration: none;'>글쓰기</a>
-  </div>
-</nav>
-<br>
-<br>
-
-{% for blog in blogs.all %}
-    <div class="container">
-        <h1>{{ blog.title }}</h1>
-        <p style="color: rgba(0, 0, 0, 0.411);">{{ blog.pub_date }}</p>
-        <p style="font-size: 17px;">{{ blog.summary }}<a href="{% url 'detail' blog.id %}" style='text-decoration: none;'>...more</a></p>
-        <br>
-        <a href="{% url 'delete' blog.id %}" style='text-decoration: none; '>삭제     /</a>
-        <a href="{% url 'edit' blog.id %}" style='text-decoration: none; '>  수정</a>
-        <br>
-        <br>
-        <hr>
-        <br>
+      <a class="btn btn-outline-light" href="{% url 'new' %}" style='text-decoration: none;'>글쓰기</a>
     </div>
-{% endfor %}
+    </nav>
+    <br>
+    <br>
+
+  <h1><span style="font-weight: 600; font-size: 18px; color: black;">김앤장의</span><span style="color:rgb(7, 158, 88);"> 떼껄룩💚</span></h1>
+  <h5 style="color: black;">💛기깔난 노래 취향에 대해 알아보아요💛</h5>
+
+  <div class ="container">
+
+  {% for blog in blogs.all %}
+  <div class="card-group">
+      <div class="card">
+        <img src="{{movie.image.url}}" class="card-img-top" alt="음악 앨범">
+        <div class="card-body">
+          <h5 class="card-title">✨{{ blog.title }}✨</h5>
+          <p class="card-text">{{ blog.summary }}...</p>
+          <p class="card-text"><small class="text-muted">{{ blog.pub_date }}</small></p>
+          <a href="{% url 'detail' blog.id %}" class="btn btn-outline-success">보러갈래?</a>
+          <a href="{% url 'edit' blog.id %}" class="btn btn-outline-success">수정할래?</a>
+          <a href="{% url 'delete' blog.id %}" class="btn btn-outline-success">삭제할래?</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+  <footer class="navbar-expand-lg navbar-dark bg-dark">
+      <p>Copyright 2020.  &nbsp; 김앤장머리속 &nbsp;🧠 🧠 🧠 &nbsp; All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

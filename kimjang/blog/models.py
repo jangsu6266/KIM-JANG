@@ -17,7 +17,7 @@ class Blog(models.Model):
         return self.title
 
     def summary(self):
-        return self.body[:100]
+        return self.body[:30]
 
 class Comment(models.Model):
     post=models.ForeignKey(Blog, related_name='comments', on_delete=models.CASCADE)
