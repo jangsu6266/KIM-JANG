@@ -4,7 +4,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 <nav class="navbar navbar-expand-lg " style="background-color: rgb(61, 110, 73);">
-<a class="navbar-brand" href="#" style="color: white;">KIM&JANG</a>
+<a class="navbar-brand" href="#" style="color: white; ">KIM&JANG</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,7 +12,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}" style="color: white;">Home </a>
+        <a class="nav-link" href="{% url 'home' %}" style="color: white;">HOME </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'home' %}" style="color: rgba(255, 255, 255, 0.705);">돌아가기 </a>
@@ -27,12 +27,12 @@
 
 
 <div class="container">
-    <h1>{{ blog.title }}</h1>
+    <h1>✨{{ blog.title }}✨</h1>
     <p style="color: rgba(0, 0, 0, 0.562);">{{ blog.pub_date }}</p>
     <br>
     <p style="font-size:20px;">{{ blog.body }}</p>
     <br>
-        <div class="hashtag">
+        <div class="hashtag" style="color: green">
             {% for hashtag in hashtags %}
              #{{hashtag.name}}
             {% endfor %}
