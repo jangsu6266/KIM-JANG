@@ -18,6 +18,10 @@ from django.urls import  path
 
 from bookmark.views import BookmarkLV,BookmarkDV
 import blog.views
+import movie.views
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 app_name = 'bookmark'
@@ -36,4 +40,7 @@ urlpatterns = [
     path('blog/edit/<int:blog_id>', blog.views.edit, name="edit"),
     path('blog/update/<int:blog_id>', blog.views.update, name="update"),
     path('blog/comment/<int:blog_id>', blog.views.add_comment_to_post, name="add_comment_to_post"),
-]
+
+    path('movie/',movie.views.movie, name="movie"),
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
